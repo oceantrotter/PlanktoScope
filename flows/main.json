@@ -1446,36 +1446,6 @@
         "height": 1
     },
     {
-        "id": "607c78b693fddd53",
-        "type": "ui_spacer",
-        "z": "b771c342.49603",
-        "name": "spacer",
-        "group": "cef1e703.bcf3c8",
-        "order": 6,
-        "width": 10,
-        "height": 1
-    },
-    {
-        "id": "69044f46edc4026b",
-        "type": "ui_spacer",
-        "z": "b771c342.49603",
-        "name": "spacer",
-        "group": "cef1e703.bcf3c8",
-        "order": 12,
-        "width": 10,
-        "height": 1
-    },
-    {
-        "id": "79fab886fdc38e49",
-        "type": "ui_spacer",
-        "z": "b771c342.49603",
-        "name": "spacer",
-        "group": "fc5e4e6f.5b1c8",
-        "order": 3,
-        "width": 1,
-        "height": 1
-    },
-    {
         "id": "4edd6765da1cef8c",
         "type": "ui_spacer",
         "z": "9daf9e2b.019fc",
@@ -1563,6 +1533,36 @@
         "group": "1be83144.4fe4bf",
         "order": 13,
         "width": 3,
+        "height": 1
+    },
+    {
+        "id": "c08ebdc012aada5d",
+        "type": "ui_spacer",
+        "z": "b771c342.49603",
+        "name": "spacer",
+        "group": "cef1e703.bcf3c8",
+        "order": 3,
+        "width": 10,
+        "height": 1
+    },
+    {
+        "id": "683ab83120d36611",
+        "type": "ui_spacer",
+        "z": "b771c342.49603",
+        "name": "spacer",
+        "group": "cef1e703.bcf3c8",
+        "order": 7,
+        "width": 10,
+        "height": 1
+    },
+    {
+        "id": "44ec2454b4a4e636",
+        "type": "ui_spacer",
+        "z": "b771c342.49603",
+        "name": "spacer",
+        "group": "fc5e4e6f.5b1c8",
+        "order": 3,
+        "width": 1,
         "height": 1
     },
     {
@@ -2859,7 +2859,7 @@
         "label": "Max sampling depth (m)",
         "tooltip": "in m",
         "group": "cf5d9f0e.d57e7",
-        "order": 3,
+        "order": 2,
         "width": 5,
         "height": 1,
         "passthru": true,
@@ -2885,7 +2885,7 @@
         "label": "Min sampling depth (m)",
         "tooltip": "in m",
         "group": "cf5d9f0e.d57e7",
-        "order": 2,
+        "order": 1,
         "width": 5,
         "height": 1,
         "passthru": true,
@@ -2949,7 +2949,7 @@
         "label": "Net opening dimension (mm)",
         "tooltip": "Size of the net mouth opening (in mm)",
         "group": "cf5d9f0e.d57e7",
-        "order": 4,
+        "order": 3,
         "width": 10,
         "height": 1,
         "passthru": true,
@@ -3207,7 +3207,7 @@
         "label": "Speed Through Water (kts)",
         "tooltip": "in knots",
         "group": "cf5d9f0e.d57e7",
-        "order": 5,
+        "order": 4,
         "width": 10,
         "height": 1,
         "passthru": true,
@@ -3362,7 +3362,7 @@
         "label": "Sampling time",
         "tooltip": "HH:MM(:SS) UTC",
         "group": "cef1e703.bcf3c8",
-        "order": 3,
+        "order": 4,
         "width": 10,
         "height": 1,
         "passthru": true,
@@ -3412,9 +3412,9 @@
         "z": "b771c342.49603",
         "name": "object_lat",
         "label": "Sampling Latitude",
-        "tooltip": "36.574439N",
+        "tooltip": "in Decimal Degrees: 12.98765N",
         "group": "cef1e703.bcf3c8",
-        "order": 4,
+        "order": 5,
         "width": 10,
         "height": 1,
         "passthru": true,
@@ -3991,7 +3991,7 @@
         "label": "Sampling time (end)",
         "tooltip": "HH:MM(:SS) UTC",
         "group": "cef1e703.bcf3c8",
-        "order": 9,
+        "order": 10,
         "width": 10,
         "height": 1,
         "passthru": true,
@@ -4017,7 +4017,7 @@
         "label": "Sampling date (end)",
         "tooltip": "YYYY-MM-DD",
         "group": "cef1e703.bcf3c8",
-        "order": 8,
+        "order": 9,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -4041,9 +4041,9 @@
         "z": "b771c342.49603",
         "name": "object_lat_end",
         "label": "Sampling Latitude (end)",
-        "tooltip": "36.574439N",
+        "tooltip": "in Decimal Degrees: 12.98765N",
         "group": "cef1e703.bcf3c8",
-        "order": 10,
+        "order": 11,
         "width": 10,
         "height": 1,
         "passthru": true,
@@ -4067,9 +4067,9 @@
         "z": "b771c342.49603",
         "name": "object_lon_end",
         "label": "Sampling Longitude (end)",
-        "tooltip": "110.42100W",
+        "tooltip": "in Decimal Degrees: 123.98765W",
         "group": "cef1e703.bcf3c8",
-        "order": 11,
+        "order": 12,
         "width": 10,
         "height": 1,
         "passthru": true,
@@ -4367,9 +4367,9 @@
         "z": "b771c342.49603",
         "name": "object_lon",
         "label": "Sample Longitude",
-        "tooltip": "110.42100W",
+        "tooltip": "in Decimal Degrees: 123.98765W",
         "group": "cef1e703.bcf3c8",
-        "order": 5,
+        "order": 6,
         "width": 10,
         "height": 1,
         "passthru": true,
@@ -4398,7 +4398,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1130,
+        "x": 1250,
         "y": 800,
         "wires": [
             [
@@ -4427,7 +4427,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1130,
+        "x": 1250,
         "y": 840,
         "wires": [
             [
@@ -4459,7 +4459,7 @@
         "raw": false,
         "topic": "",
         "name": "",
-        "x": 1410,
+        "x": 1530,
         "y": 860,
         "wires": [
             []
@@ -4499,7 +4499,7 @@
         "z": "b771c342.49603",
         "name": "Get data from start point",
         "group": "cef1e703.bcf3c8",
-        "order": 7,
+        "order": 8,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -4613,7 +4613,7 @@
         "type": "function",
         "z": "b771c342.49603",
         "name": "get sampling start data",
-        "func": "var date = { \"topic\": \"object_date_end\", \"payload\": global.get(\"object_date\") }\nvar time = { \"topic\": \"object_time_end\", \"payload\": global.get(\"object_time\") }\nvar lat = { \"topic\": \"object_lon_end\", \"payload\": global.get(\"object_lat\") }\nvar lon = { \"topic\": \"object_lat_end\", \"payload\": global.get(\"object_lon\") }\n\n\nreturn [date, time, lat, lon]\n",
+        "func": "var date = { \"topic\": \"object_date_end\", \"payload\": global.get(\"object_date\") }\nvar time = { \"topic\": \"object_time_end\", \"payload\": global.get(\"object_time\") }\nvar lat = { \"topic\": \"object_lat_end\", \"payload\": global.get(\"object_lat\") }\nvar lon = { \"topic\": \"object_lon_end\", \"payload\": global.get(\"object_lon\") }\n\n\nreturn [date, time, lat, lon]\n",
         "outputs": 4,
         "noerr": 0,
         "initialize": "",
@@ -4623,16 +4623,16 @@
         "y": 840,
         "wires": [
             [
-                "1a77598c88654944"
+                "9895313574268864"
             ],
             [
-                "4477d47fb509decd"
+                "9895313574268864"
             ],
             [
-                "eae1267df3893054"
+                "1a6dc671d99681ba"
             ],
             [
-                "331f10d381a0b4a9"
+                "1a6dc671d99681ba"
             ]
         ]
     },
@@ -4714,13 +4714,13 @@
         "type": "function",
         "z": "b771c342.49603",
         "name": "Validate coordinates",
-        "func": "function ValidateCoordinates(input, lat) {\n    // Input Format 36.574439°N, 110.42100°W\n\n    let error = {\"topic\" : \"Error with the\"}\n\n    let direction = input.match(/[NSEW]/)\n    let position = input.match(/[\\+\\-\\d\\.]+/)\n\n    if (direction === null) {\n        error.payload = \"You need to explicitely enter N/S/E/W\"\n        return [null, error]\n    }\n\n    // Test that the position is only made of digits!\n    if (/^[\\+\\-]/.test(position)) {\n        error.payload = \"Use of +/- sign is inconsistent with N/S/E/W letter! Please only use N/S/E/W!\"\n        return [null, error]\n    }\n\n    let dd = Number(position)\n    if (lat) {\n        // Check latitude\n        if ((direction == \"S\" || direction == \"N\") && dd > 90.0) {\n            error.payload = \"Latitude is more than 90°\"\n            return [null, error]\n        }\n        if (direction == \"W\" || direction == \"E\") {\n            error.payload = \"This is not a Latitude!\"\n            return [null, error]\n        }\n    }\n    else {\n        // Check longitude\n        if ((direction == \"W\" || direction == \"E\") && dd > 180.0) {\n            error.payload = \"Longitude is more than 180°\"\n            return [null, error]\n        }\n        if (direction == \"N\" || direction == \"S\") {\n            error.payload = \"This is not a Longitude!\"\n            return [null, error]\n        }\n    }\n\n    if (direction == \"S\" || direction == \"W\") {\n        dd *= -1\n    } // Don't do anything for N or E\n    return [dd.toFixed(5), null]\n\n}\n\nlet ret = []\n\nif (msg.topic.includes(\"lat\")){\n    ret = ValidateCoordinates(msg.payload, true);\n    if (ret[1] !== null) {\n        if (msg.topic.includes(\"end\")) {\n            ret[1].topic += \" sampling end latitude\"\n        }\n        else {\n            ret[1].topic += \" sampling latitude\"\n        }\n        return [null, ret[1]]\n    }\n    msg.payload = ret[0]\n    return [msg, null]\n}\n\n\nif (msg.topic.includes(\"lon\")){\n    ret = ValidateCoordinates(msg.payload, false);\n    if (ret[1] !== null) {\n        if (msg.topic.includes(\"end\")) {\n        ret[1].topic += \" sampling end longitude\"\n        }\n        else{\n            ret[1].topic += \" sampling longitude\"\n        }\n        return [null, ret[1]]\n    }\n    msg.payload = ret[0]\n    return [msg, null]\n}\n",
+        "func": "function ValidateCoordinates(input, lat) {\n    // Input Format 36.574439N, 110.42100W\n\n    let error = {\"topic\" : \"Error with the\"}\n\n    let direction = input.match(/[NSEW]/)\n    let position = input.match(/[\\+\\-\\d\\.]+/)\n\n    if (direction === null) {\n        error.payload = \"You need to explicitely enter N/S/E/W\"\n        return [null, error]\n    }\n\n    // Test that the position is only made of digits!\n    if (/^[\\+\\-]/.test(position)) {\n        error.payload = \"Use of +/- sign is inconsistent with N/S/E/W letter! Please only use N/S/E/W!\"\n        return [null, error]\n    }\n\n    let dd = Number(position)\n    if (lat) {\n        // Check latitude\n        if ((direction == \"S\" || direction == \"N\") && dd > 90.0) {\n            error.payload = \"Latitude is more than 90°\"\n            return [null, error]\n        }\n        if (direction == \"W\" || direction == \"E\") {\n            error.payload = \"This is not a Latitude!\"\n            return [null, error]\n        }\n    }\n    else {\n        // Check longitude\n        if ((direction == \"W\" || direction == \"E\") && dd > 180.0) {\n            error.payload = \"Longitude is more than 180°\"\n            return [null, error]\n        }\n        if (direction == \"N\" || direction == \"S\") {\n            error.payload = \"This is not a Longitude!\"\n            return [null, error]\n        }\n    }\n\n    if (direction == \"S\" || direction == \"W\") {\n        dd *= -1\n    } // Don't do anything for N or E\n    return [dd.toFixed(5), null]\n\n}\n\nlet ret = []\n\nif (msg.topic.includes(\"lat\")){\n    ret = ValidateCoordinates(msg.payload, true);\n    if (ret[1] !== null) {\n        if (msg.topic.includes(\"end\")) {\n            ret[1].topic += \" sampling end latitude\"\n        }\n        else {\n            ret[1].topic += \" sampling latitude\"\n        }\n        return [null, ret[1]]\n    }\n    msg.payload = ret[0]\n    return [msg, null]\n}\n\n\nif (msg.topic.includes(\"lon\")){\n    ret = ValidateCoordinates(msg.payload, false);\n    if (ret[1] !== null) {\n        if (msg.topic.includes(\"end\")) {\n        ret[1].topic += \" sampling end longitude\"\n        }\n        else{\n            ret[1].topic += \" sampling longitude\"\n        }\n        return [null, ret[1]]\n    }\n    msg.payload = ret[0]\n    return [msg, null]\n}\n",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1160,
+        "x": 1280,
         "y": 880,
         "wires": [
             [
@@ -4871,7 +4871,7 @@
         "type": "subflow:c4e2b4ed08e5c5db",
         "z": "b771c342.49603",
         "name": "",
-        "x": 1450,
+        "x": 1570,
         "y": 820,
         "wires": [
             [
