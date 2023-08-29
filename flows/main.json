@@ -1137,46 +1137,6 @@
         "collapse": false
     },
     {
-        "id": "97148e8d8e298f1a",
-        "type": "ui_spacer",
-        "z": "cb95299c.2817c8",
-        "name": "spacer",
-        "group": "abeb6dad.635a2",
-        "order": 7,
-        "width": 10,
-        "height": 1
-    },
-    {
-        "id": "3b2eccc574e6a9ae",
-        "type": "ui_spacer",
-        "z": "cb95299c.2817c8",
-        "name": "spacer",
-        "group": "abeb6dad.635a2",
-        "order": 11,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "bbd6431d97c86f97",
-        "type": "ui_spacer",
-        "z": "cb95299c.2817c8",
-        "name": "spacer",
-        "group": "46be9c86.dea684",
-        "order": 4,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "5f98f5f140f0ecde",
-        "type": "ui_spacer",
-        "z": "cb95299c.2817c8",
-        "name": "spacer",
-        "group": "46be9c86.dea684",
-        "order": 6,
-        "width": 3,
-        "height": 1
-    },
-    {
         "id": "bc08e94c999e8d27",
         "type": "ui_tab",
         "name": "PlanktoScope",
@@ -1563,6 +1523,46 @@
         "group": "fc5e4e6f.5b1c8",
         "order": 3,
         "width": 1,
+        "height": 1
+    },
+    {
+        "id": "8bcd838f4d3485b1",
+        "type": "ui_spacer",
+        "z": "cb95299c.2817c8",
+        "name": "spacer",
+        "group": "abeb6dad.635a2",
+        "order": 8,
+        "width": 10,
+        "height": 1
+    },
+    {
+        "id": "da1fbdc2570f185a",
+        "type": "ui_spacer",
+        "z": "cb95299c.2817c8",
+        "name": "spacer",
+        "group": "abeb6dad.635a2",
+        "order": 12,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "86517323ae40728b",
+        "type": "ui_spacer",
+        "z": "cb95299c.2817c8",
+        "name": "spacer",
+        "group": "46be9c86.dea684",
+        "order": 4,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "a5d5876013165873",
+        "type": "ui_spacer",
+        "z": "cb95299c.2817c8",
+        "name": "spacer",
+        "group": "46be9c86.dea684",
+        "order": 6,
+        "width": 3,
         "height": 1
     },
     {
@@ -8208,8 +8208,8 @@
         "payload": "{\"tab\":\"Home\"}",
         "payloadType": "json",
         "topic": "",
-        "x": 310,
-        "y": 600,
+        "x": 370,
+        "y": 860,
         "wires": [
             [
                 "f0fb77cf.8f1c28"
@@ -8222,8 +8222,8 @@
         "z": "cb95299c.2817c8",
         "name": "",
         "events": "change",
-        "x": 620,
-        "y": 600,
+        "x": 680,
+        "y": 860,
         "wires": [
             []
         ]
@@ -8234,7 +8234,7 @@
         "z": "cb95299c.2817c8",
         "name": "Start segmentation",
         "group": "abeb6dad.635a2",
-        "order": 10,
+        "order": 11,
         "width": 5,
         "height": 1,
         "passthru": false,
@@ -8246,8 +8246,8 @@
         "payload": "{\"action\":\"segment\"}",
         "payloadType": "json",
         "topic": "segmenter/segment",
-        "x": 250,
-        "y": 460,
+        "x": 330,
+        "y": 760,
         "wires": [
             [
                 "33c28dc1.238002",
@@ -8262,7 +8262,7 @@
         "d": true,
         "name": "Stop segmentation",
         "group": "abeb6dad.635a2",
-        "order": 12,
+        "order": 13,
         "width": 4,
         "height": 1,
         "passthru": true,
@@ -8274,8 +8274,8 @@
         "payload": "{\"action\":\"stop\"}",
         "payloadType": "json",
         "topic": "segmenter/segment",
-        "x": 250,
-        "y": 520,
+        "x": 330,
+        "y": 800,
         "wires": [
             [
                 "16f3cef4.0acac9"
@@ -8291,8 +8291,8 @@
         "qos": "",
         "retain": "",
         "broker": "8dc3722c.06efa8",
-        "x": 730,
-        "y": 520,
+        "x": 950,
+        "y": 800,
         "wires": []
     },
     {
@@ -8306,7 +8306,7 @@
         "initialize": "",
         "finalize": "",
         "x": 690,
-        "y": 800,
+        "y": 1040,
         "wires": [
             [
                 "fa3b7929.ac7da8",
@@ -8346,8 +8346,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 4,
-        "x": 370,
-        "y": 740,
+        "x": 350,
+        "y": 980,
         "wires": [
             [
                 "b9a23b91.93638",
@@ -8401,7 +8401,7 @@
         ],
         "outputs": 1,
         "x": 1200,
-        "y": 840,
+        "y": 1080,
         "wires": [
             []
         ]
@@ -8417,7 +8417,7 @@
         "initialize": "",
         "finalize": "",
         "x": 680,
-        "y": 920,
+        "y": 1160,
         "wires": [
             [
                 "458cd82e.03d258"
@@ -8439,7 +8439,7 @@
         "topic": "",
         "name": "",
         "x": 1200,
-        "y": 680,
+        "y": 920,
         "wires": []
     },
     {
@@ -8479,7 +8479,7 @@
         ],
         "outputs": 1,
         "x": 1190,
-        "y": 920,
+        "y": 1160,
         "wires": [
             []
         ]
@@ -8498,7 +8498,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 710,
-        "y": 760,
+        "y": 1000,
         "wires": []
     },
     {
@@ -8513,7 +8513,7 @@
         "template": "The {{topic}} is {{payload.status}}",
         "output": "str",
         "x": 980,
-        "y": 680,
+        "y": 920,
         "wires": [
             [
                 "a4f0f0d1.3aca88"
@@ -8542,7 +8542,7 @@
         "to": "",
         "reg": false,
         "x": 730,
-        "y": 680,
+        "y": 920,
         "wires": [
             [
                 "7088a5be.0c79a4"
@@ -8562,7 +8562,7 @@
         "format": "{{msg.payload.status}}",
         "layout": "row-spread",
         "x": 690,
-        "y": 720,
+        "y": 960,
         "wires": []
     },
     {
@@ -8578,7 +8578,7 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "x": 1180,
-        "y": 800,
+        "y": 1040,
         "wires": []
     },
     {
@@ -8603,7 +8603,7 @@
         "payload": "0",
         "payloadType": "num",
         "x": 690,
-        "y": 880,
+        "y": 1120,
         "wires": [
             [
                 "ac439738.28bc18",
@@ -8620,7 +8620,7 @@
             "dcf5bd45.16a8d"
         ],
         "x": 175,
-        "y": 740,
+        "y": 980,
         "wires": [
             [
                 "aa38dbbc.cf0a9"
@@ -8642,7 +8642,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "x": 1200,
-        "y": 760,
+        "y": 1000,
         "wires": [
             []
         ]
@@ -8662,7 +8662,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "x": 1190,
-        "y": 880,
+        "y": 1120,
         "wires": [
             []
         ]
@@ -8672,14 +8672,14 @@
         "type": "function",
         "z": "cb95299c.2817c8",
         "name": "prepare segmentation",
-        "func": "global.set('obj_counter', 0);\n\nvar segmentation_list = flow.get('segmentation_list')\nif (segmentation_list !== undefined && segmentation_list !== \"\") {\n    msg.payload['path'] = segmentation_list\n}\n\n\nvar force = flow.get('force')\nif (force !== undefined && force !== \"\") {\n    msg.payload['settings'] = {\"force\":Boolean(force)}\n}\n\n\nvar recursive = flow.get('recursive')\nif (recursive !== undefined && recursive !== \"\") {\n    if (\"settings\" in msg.payload){\n        msg.payload.settings[\"recursive\"] = Boolean(recursive)\n    }\n    else{\n        msg.payload['settings'] = {\"recursive\": Boolean(recursive)}\n    }\n}\n\nvar ecotaxa = flow.get('ecotaxa')\nif (ecotaxa !== undefined && ecotaxa !== \"\") {\n    if (\"settings\" in msg.payload){\n        msg.payload.settings[\"ecotaxa\"] = Boolean(ecotaxa)\n    }\n    else{\n        msg.payload['settings'] = {\"ecotaxa\": Boolean(ecotaxa)}\n    }\n}\n\nvar keep = flow.get('keep')\nif (keep !== undefined && keep !== \"\") {\n    if (\"settings\" in msg.payload){\n        msg.payload.settings[\"keep\"] = Boolean(keep)\n    }\n    else{\n        msg.payload['settings'] = {\"keep\": Boolean(keep)}\n    }\n}\n\nvar process_id = global.get('process_id')\nif (process_id !== undefined && process_id !== \"\") {\n    if (\"settings\" in msg.payload){\n        msg.payload.settings[\"process_id\"] = process_id\n    }\n    else{\n        msg.payload['settings'] = {\"process_id\": process_id}\n    }\n}\n\nreturn msg;",
+        "func": "global.set('obj_counter', 0);\n\nvar segmentation_list = flow.get('segmentation_list')\nif (segmentation_list !== undefined && segmentation_list !== \"\") {\n    msg.payload['path'] = segmentation_list\n}\n\n\nvar force = flow.get('force')\nif (force !== undefined && force !== \"\") {\n    msg.payload['settings'] = {\"force\":Boolean(force)}\n}\n\n\nvar recursive = flow.get('recursive')\nif (recursive !== undefined && recursive !== \"\") {\n    if (\"settings\" in msg.payload){\n        msg.payload.settings[\"recursive\"] = Boolean(recursive)\n    }\n    else{\n        msg.payload['settings'] = {\"recursive\": Boolean(recursive)}\n    }\n}\n\nvar ecotaxa = flow.get('ecotaxa')\nif (ecotaxa !== undefined && ecotaxa !== \"\") {\n    if (\"settings\" in msg.payload){\n        msg.payload.settings[\"ecotaxa\"] = Boolean(ecotaxa)\n    }\n    else{\n        msg.payload['settings'] = {\"ecotaxa\": Boolean(ecotaxa)}\n    }\n}\n\nvar keep = flow.get('keep')\nif (keep !== undefined && keep !== \"\") {\n    if (\"settings\" in msg.payload){\n        msg.payload.settings[\"keep\"] = Boolean(keep)\n    }\n    else{\n        msg.payload['settings'] = {\"keep\": Boolean(keep)}\n    }\n}\n\nvar process_id = global.get('process_id')\nif (process_id !== undefined && process_id !== \"\") {\n    if (\"settings\" in msg.payload){\n        msg.payload.settings[\"process_id\"] = process_id\n    }\n    else{\n        msg.payload['settings'] = {\"process_id\": process_id}\n    }\n}\n\nvar process_min_segmentation = global.get('process_min_segmentation')\nif (process_min_segmentation !== undefined && process_min_segmentation !== \"\") {\n    if (\"settings\" in msg.payload) {\n        msg.payload.settings[\"process_min_segmentation\"] = process_min_segmentation\n    }\n    else {\n        msg.payload['settings'] = { \"process_min_segmentation\": process_min_segmentation }\n    }\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 500,
-        "y": 460,
+        "x": 720,
+        "y": 740,
         "wires": [
             [
                 "16f3cef4.0acac9"
@@ -8692,11 +8692,12 @@
         "z": "cb95299c.2817c8",
         "name": "",
         "env": [],
-        "x": 280,
-        "y": 380,
+        "x": 300,
+        "y": 520,
         "wires": [
             [
-                "d56fc819c15da238"
+                "d56fc819c15da238",
+                "700c8bb1181ddcd7"
             ]
         ]
     },
@@ -8706,7 +8707,7 @@
         "z": "cb95299c.2817c8",
         "group": "abeb6dad.635a2",
         "name": "",
-        "order": 9,
+        "order": 10,
         "width": 10,
         "height": 11,
         "lineType": "one",
@@ -8714,8 +8715,8 @@
         "allowHTML": false,
         "outputs": 1,
         "topic": "",
-        "x": 710,
-        "y": 140,
+        "x": 910,
+        "y": 160,
         "wires": [
             [
                 "cb3b87b5.63c4"
@@ -8732,8 +8733,8 @@
         "isRecursive": true,
         "findDir": true,
         "isArray": true,
-        "x": 340,
-        "y": 140,
+        "x": 540,
+        "y": 160,
         "wires": [
             [
                 "ba2947.c854deb8"
@@ -8746,7 +8747,7 @@
         "z": "cb95299c.2817c8",
         "name": "Refresh",
         "group": "abeb6dad.635a2",
-        "order": 8,
+        "order": 9,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -8758,8 +8759,8 @@
         "payload": "",
         "payloadType": "date",
         "topic": "update",
-        "x": 140,
-        "y": 140,
+        "x": 340,
+        "y": 160,
         "wires": [
             [
                 "8bd8fb2c.53fa4",
@@ -8784,8 +8785,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 150,
-        "y": 100,
+        "x": 350,
+        "y": 120,
         "wires": [
             [
                 "8bd8fb2c.53fa4",
@@ -8803,8 +8804,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 910,
-        "y": 140,
+        "x": 1110,
+        "y": 160,
         "wires": [
             []
         ]
@@ -8828,8 +8829,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 390,
-        "y": 100,
+        "x": 590,
+        "y": 120,
         "wires": [
             []
         ]
@@ -8839,7 +8840,7 @@
         "type": "ui_template",
         "z": "cb95299c.2817c8",
         "group": "abeb6dad.635a2",
-        "name": "Update message",
+        "name": "Segmentation message",
         "order": 1,
         "width": 10,
         "height": 3,
@@ -8848,7 +8849,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 150,
+        "className": "",
+        "x": 670,
         "y": 40,
         "wires": [
             []
@@ -8864,8 +8866,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 530,
-        "y": 140,
+        "x": 730,
+        "y": 160,
         "wires": [
             [
                 "3ea12061.ce62c"
@@ -8878,7 +8880,7 @@
         "z": "cb95299c.2817c8",
         "name": "recursive toggle",
         "group": "abeb6dad.635a2",
-        "order": 4,
+        "order": 5,
         "width": 5,
         "height": 1,
         "label": "Recursive folder",
@@ -8901,8 +8903,8 @@
                 "color": "#999999"
             }
         ],
-        "x": 360,
-        "y": 220,
+        "x": 540,
+        "y": 260,
         "wires": [
             [
                 "880b192a.88e2d"
@@ -8915,7 +8917,7 @@
         "z": "cb95299c.2817c8",
         "name": "force toggle",
         "group": "abeb6dad.635a2",
-        "order": 3,
+        "order": 4,
         "width": 5,
         "height": 1,
         "label": "Force rework",
@@ -8938,8 +8940,8 @@
                 "color": "#999999"
             }
         ],
-        "x": 350,
-        "y": 300,
+        "x": 530,
+        "y": 340,
         "wires": [
             [
                 "a4f68fa6.5d77f8"
@@ -8965,8 +8967,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 570,
-        "y": 240,
+        "x": 750,
+        "y": 280,
         "wires": [
             []
         ]
@@ -8990,8 +8992,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 550,
-        "y": 280,
+        "x": 730,
+        "y": 320,
         "wires": [
             []
         ]
@@ -9013,8 +9015,8 @@
         "topic": "",
         "payload": "0",
         "payloadType": "num",
-        "x": 150,
-        "y": 280,
+        "x": 330,
+        "y": 320,
         "wires": [
             [
                 "dffb9881.feef8",
@@ -9036,8 +9038,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": false,
         "templateScope": "local",
-        "x": 1230,
-        "y": 600,
+        "x": 1290,
+        "y": 860,
         "wires": [
             []
         ]
@@ -9059,8 +9061,8 @@
         "topic": "",
         "payload": "1",
         "payloadType": "num",
-        "x": 150,
-        "y": 240,
+        "x": 330,
+        "y": 280,
         "wires": [
             [
                 "21af0db1.c2c182",
@@ -9079,7 +9081,7 @@
         "initialize": "",
         "finalize": "",
         "x": 860,
-        "y": 880,
+        "y": 1120,
         "wires": [
             [
                 "458cd82e.03d258"
@@ -9106,7 +9108,7 @@
         "to": "",
         "reg": false,
         "x": 900,
-        "y": 840,
+        "y": 1080,
         "wires": [
             [
                 "fa3b7929.ac7da8",
@@ -9123,7 +9125,7 @@
             "596fc9d4.46c75"
         ],
         "x": 735,
-        "y": 840,
+        "y": 1080,
         "wires": [
             [
                 "4f3f7c4a.cb21c4",
@@ -9140,8 +9142,8 @@
         "links": [
             "6bce0f60.f48998"
         ],
-        "x": 595,
-        "y": 500,
+        "x": 815,
+        "y": 780,
         "wires": []
     },
     {
@@ -9170,8 +9172,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 480,
-        "y": 500,
+        "x": 700,
+        "y": 780,
         "wires": [
             [
                 "596fc9d4.46c75"
@@ -9184,7 +9186,7 @@
         "z": "cb95299c.2817c8",
         "name": "Ecotaxa archive",
         "group": "abeb6dad.635a2",
-        "order": 6,
+        "order": 7,
         "width": 5,
         "height": 1,
         "label": "Ecotaxa archive",
@@ -9207,8 +9209,8 @@
                 "color": "#999999"
             }
         ],
-        "x": 960,
-        "y": 220,
+        "x": 1140,
+        "y": 260,
         "wires": [
             [
                 "25ac4f9a.5b05c8"
@@ -9234,8 +9236,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1160,
-        "y": 240,
+        "x": 1340,
+        "y": 280,
         "wires": [
             []
         ]
@@ -9257,8 +9259,8 @@
         "topic": "",
         "payload": "1",
         "payloadType": "num",
-        "x": 790,
-        "y": 240,
+        "x": 970,
+        "y": 280,
         "wires": [
             [
                 "9367534a.fb8568",
@@ -9272,7 +9274,7 @@
         "z": "cb95299c.2817c8",
         "name": "Keep objects",
         "group": "abeb6dad.635a2",
-        "order": 5,
+        "order": 6,
         "width": 5,
         "height": 1,
         "label": "Keep objects",
@@ -9295,8 +9297,8 @@
                 "color": "#999999"
             }
         ],
-        "x": 950,
-        "y": 300,
+        "x": 1130,
+        "y": 340,
         "wires": [
             [
                 "8dd6f57f.b77f98"
@@ -9322,8 +9324,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1150,
-        "y": 280,
+        "x": 1330,
+        "y": 320,
         "wires": [
             []
         ]
@@ -9345,8 +9347,8 @@
         "topic": "",
         "payload": "1",
         "payloadType": "num",
-        "x": 790,
-        "y": 280,
+        "x": 970,
+        "y": 320,
         "wires": [
             [
                 "32465a4e.8fcac6",
@@ -9372,8 +9374,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "str",
-        "x": 670,
-        "y": 380,
+        "x": 930,
+        "y": 500,
         "wires": [
             [
                 "4d70f657b9e0cb81"
@@ -9388,8 +9390,8 @@
         "links": [
             "49111a72f4e32740"
         ],
-        "x": 825,
-        "y": 600,
+        "x": 885,
+        "y": 860,
         "wires": [
             [
                 "e077b83ad375cb95"
@@ -9407,8 +9409,8 @@
         "syntax": "mustache",
         "template": "<center>\n    Latest object segmented:<br/>\n    <img src=\"http://{{payload}}:8001/object.mjpg\"\n    onerror=\"this.onerror=null; this.src='http://{{payload}}:80/error.svg'\"\n    alt=\"If you see this, there probably is an error either with your camera or with the python service. Please restart your machine.\"\n    style=\"max-width: 100%;max-height: 100%;\">\n</center>",
         "output": "str",
-        "x": 980,
-        "y": 600,
+        "x": 1040,
+        "y": 860,
         "wires": [
             [
                 "f078c068.eacf58"
@@ -9434,8 +9436,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 480,
-        "y": 380,
+        "x": 540,
+        "y": 500,
         "wires": [
             [
                 "56971109c8be3b54"
@@ -9447,10 +9449,63 @@
         "type": "subflow:c4e2b4ed08e5c5db",
         "z": "cb95299c.2817c8",
         "name": "",
-        "x": 890,
-        "y": 380,
+        "x": 1270,
+        "y": 520,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "2f606440e1f439d4",
+        "type": "ui_text_input",
+        "z": "cb95299c.2817c8",
+        "name": "process_min_segmentation",
+        "label": "Segmentation minimal size",
+        "tooltip": "in µm",
+        "group": "abeb6dad.635a2",
+        "order": 3,
+        "width": 10,
+        "height": 1,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "process_min_segmentation",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 880,
+        "y": 540,
+        "wires": [
+            [
+                "4d70f657b9e0cb81"
+            ]
+        ]
+    },
+    {
+        "id": "700c8bb1181ddcd7",
+        "type": "change",
+        "z": "cb95299c.2817c8",
+        "name": "get process_min_segmentation",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "process_min_segmentation",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 540,
+        "wires": [
+            [
+                "2f606440e1f439d4"
+            ]
         ]
     },
     {

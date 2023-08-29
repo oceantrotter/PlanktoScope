@@ -99,6 +99,7 @@ class SegmenterProcess(multiprocessing.Process):
         self.__working_debug_path = ""
         self.__archive_fn = ""
         self.__process_id = ""
+        self.__process_min_segmentation = 20
         self.__flat = None
         self.__mask_array = None
         self.__mask_to_remove = None
@@ -457,7 +458,7 @@ class SegmenterProcess(multiprocessing.Process):
             dim_slice = tuple(dim_slice)
             return dim_slice
 
-        minMesh = self.__global_metadata.get("acq_minimum_mesh", 20)  # microns
+        minMesh = self.__global_metadata.get("process_min_segmentation", 20)  # microns
         minESD = minMesh * 2
         minArea = math.pi * (minESD / 2) * (minESD / 2)
         pixel_size = self.__global_metadata.get("process_pixel", 1.0)
@@ -820,6 +821,9 @@ class SegmenterProcess(multiprocessing.Process):
         self.__global_metadata["process_datetime"] = date
         self.__global_metadata["process_uuid"] = self.__process_uuid
         self.__global_metadata["process_id"] = f"{project}_{sample}_{self.__process_id}"
+        self.__global_metadata[
+            "process_min_segmentation"
+        ] = self.__process_min_segmentation
 
         # TODO Make this dynamic: if we change operations order and/or parameters, we need to make this evolve.
         self.__global_metadata["process_1st_operation"] = {
@@ -941,8 +945,12 @@ class SegmenterProcess(multiprocessing.Process):
                         self.__save_debug_img = last_message["settings"]["keep"]
 
                     if "process_id" in last_message["settings"]:
-                        # keep debug images
                         self.__process_id = last_message["settings"]["process_id"]
+
+                    if "process_min_segmentation" in last_message["settings"]:
+                        self.__process_min_segmentation = last_message["settings"][
+                            "process_min_segmentation"
+                        ]
                     # TODO eventually add customisation to segmenter parameters here
 
                 path = last_message["path"] if "path" in last_message else None
