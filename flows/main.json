@@ -2816,7 +2816,7 @@
         "color": "#097479",
         "bgcolor": "white",
         "className": "",
-        "icon": "keyboard_return",
+        "icon": "first_page",
         "payload": "{\"tab\":\"Home\"}",
         "payloadType": "json",
         "topic": "",
@@ -2844,7 +2844,7 @@
         "color": "#097479",
         "bgcolor": "white",
         "className": "",
-        "icon": "keyboard_tab",
+        "icon": "last_page",
         "payload": "{\"tab\":\"Optical Configuration\"}",
         "payloadType": "json",
         "topic": "",
@@ -2982,7 +2982,7 @@
         "type": "ui_text_input",
         "z": "b771c342.49603",
         "name": "sample_gear_net_opening",
-        "label": "Net opening dimension (mm)",
+        "label": "Net mouth opening dimension (mm)",
         "tooltip": "Size of the net mouth opening (in mm)",
         "group": "cf5d9f0e.d57e7",
         "order": 3,
@@ -3188,7 +3188,7 @@
         "type": "ui_text_input",
         "z": "b771c342.49603",
         "name": "sample_dilution_factor",
-        "label": "Dilution Factor before imaging and after sampling",
+        "label": "Dilution factor from the original sample",
         "tooltip": "0.5 if diluted by two; 2 if concentrated by a factor 2",
         "group": "9398d5fb9d55df14",
         "order": 8,
@@ -3998,7 +3998,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1690,
+        "x": 1670,
         "y": 300,
         "wires": [
             [
@@ -4898,7 +4898,7 @@
         "type": "subflow:c4e2b4ed08e5c5db",
         "z": "b771c342.49603",
         "name": "",
-        "x": 1390,
+        "x": 1350,
         "y": 300,
         "wires": [
             [
@@ -5414,17 +5414,17 @@
         "width": 3,
         "height": 1,
         "passthru": false,
-        "label": "Home",
+        "label": "Sample",
         "tooltip": "",
         "color": "#097479",
         "bgcolor": "white",
         "className": "",
-        "icon": "keyboard_return",
-        "payload": "{\"tab\":\"Home\"}",
+        "icon": "first_page",
+        "payload": "{\"tab\":\"Sample\"}",
         "payloadType": "json",
         "topic": "",
         "topicType": "str",
-        "x": 190,
+        "x": 200,
         "y": 1200,
         "wires": [
             [
@@ -5447,7 +5447,7 @@
         "color": "#097479",
         "bgcolor": "white",
         "className": "",
-        "icon": "keyboard_tab",
+        "icon": "last_page",
         "payload": "{\"tab\":\"Fluidic Acquisition\"}",
         "payloadType": "json",
         "topic": "",
@@ -7057,17 +7057,17 @@
         "width": 5,
         "height": 1,
         "passthru": false,
-        "label": "Home",
+        "label": "Optical Configuration",
         "tooltip": "",
         "color": "#097479",
         "bgcolor": "white",
         "className": "",
-        "icon": "keyboard_return",
-        "payload": "{\"tab\":\"Home\"}",
+        "icon": "first_page",
+        "payload": "{\"tab\":\"Optical Configuration\"}",
         "payloadType": "json",
         "topic": "",
         "topicType": "str",
-        "x": 170,
+        "x": 220,
         "y": 640,
         "wires": [
             [
@@ -10843,7 +10843,7 @@
         "name": "",
         "env": [],
         "x": 140,
-        "y": 520,
+        "y": 560,
         "wires": [
             [
                 "91c5d6c883eea11e",
@@ -10888,7 +10888,7 @@
         "layout": "row-spread",
         "className": "",
         "x": 600,
-        "y": 560,
+        "y": 600,
         "wires": []
     },
     {
@@ -10905,7 +10905,7 @@
         "layout": "row-spread",
         "className": "",
         "x": 610,
-        "y": 600,
+        "y": 640,
         "wires": []
     },
     {
@@ -10922,7 +10922,7 @@
         "layout": "row-spread",
         "className": "",
         "x": 610,
-        "y": 420,
+        "y": 460,
         "wires": []
     },
     {
@@ -10939,7 +10939,7 @@
         "layout": "row-spread",
         "className": "",
         "x": 600,
-        "y": 500,
+        "y": 540,
         "wires": []
     },
     {
@@ -10951,7 +10951,7 @@
             "559a8085.1d6b9"
         ],
         "x": 425,
-        "y": 480,
+        "y": 520,
         "wires": [
             [
                 "f783aefd.c3bfd8"
@@ -11816,7 +11816,7 @@
             "6c20d6a7.869b6"
         ],
         "x": 205,
-        "y": 400,
+        "y": 420,
         "wires": [
             [
                 "3e64877a.9684b"
@@ -11829,7 +11829,7 @@
         "z": "1371dec5.76e671",
         "name": "",
         "x": 600,
-        "y": 380,
+        "y": 420,
         "wires": []
     },
     {
@@ -11852,7 +11852,7 @@
         "to": "",
         "reg": false,
         "x": 360,
-        "y": 520,
+        "y": 560,
         "wires": [
             [
                 "f783aefd.c3bfd8"
@@ -11879,7 +11879,7 @@
         "to": "",
         "reg": false,
         "x": 370,
-        "y": 560,
+        "y": 600,
         "wires": [
             [
                 "bdc6718a.dd5d48"
@@ -11906,7 +11906,7 @@
         "to": "",
         "reg": false,
         "x": 380,
-        "y": 600,
+        "y": 640,
         "wires": [
             [
                 "a400a97e.e333a8"
@@ -14306,7 +14306,7 @@
         "type": "subflow:4ed26b8b.253504",
         "z": "073a18d556c8d083",
         "name": "",
-        "x": 1220,
+        "x": 1260,
         "y": 180,
         "wires": []
     },
