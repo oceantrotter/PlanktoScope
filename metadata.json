@@ -21,6 +21,7 @@
     "acq_volume": "1.00",
     "acq_nb_frame": 100,
     "process_id": 1,
+    "process_min_segmentation": 20,
     "sample_project": "Project's name",
     "sample_id": 1,
     "sample_ship": "Vessel name",
