@@ -932,7 +932,7 @@ class SegmenterProcess(multiprocessing.Process):
                     recursive = (
                         last_message["settings"]["recursive"]
                         if "recursive" in last_message
-                        else True
+                        else False
                     )
 
                     # generate ecotaxa output archive
