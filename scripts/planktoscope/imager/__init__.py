@@ -552,12 +552,14 @@ class ImagerProcess(multiprocessing.Process):
             self.__imager.change(planktoscope.imager.state_machine.Stop)
             return
 
-        logger.info("Setting up the directory structure for storing the pictures")
         self.__export_path = os.path.join(
             self.__base_path,
             self.__global_metadata["object_date"],
-            str(self.__global_metadata["sample_id"]).replace(" ", "_").strip("'"),
-            str(self.__global_metadata["acq_id"]).replace(" ", "_").strip("'"),
+            str(self.__global_metadata["sample_id"]).replace(" ", "_").replace("'", ""),
+            str(self.__global_metadata["acq_id"]).replace(" ", "_").replace("'", ""),
+        )
+        logger.info(
+            f"Setting up the directory structure for storing the pictures at {self.__export_path}"
         )
 
         if os.path.exists(self.__export_path):
