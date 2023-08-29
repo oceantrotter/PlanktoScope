@@ -364,14 +364,15 @@
         "type": "junction",
         "z": "eaae323a.31b3",
         "x": 620,
-        "y": 720,
+        "y": 740,
         "wires": [
             [
                 "06b5d855ad2bab37",
                 "e7f0efcdfb10f273",
                 "f5ae31185201c5a0",
                 "771d4eadcbcb38ba",
-                "3a3c0dca6ed72238"
+                "3a3c0dca6ed72238",
+                "f88743f06aedb8df"
             ]
         ]
     },
@@ -2152,7 +2153,7 @@
         "width": 0,
         "height": 0,
         "passthru": true,
-        "label": "Load from metada",
+        "label": "Load from metadata",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
@@ -2163,7 +2164,7 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 210,
-        "y": 720,
+        "y": 740,
         "wires": [
             [
                 "ab012c06222d5c99"
@@ -2351,7 +2352,7 @@
         "z": "eaae323a.31b3",
         "name": "",
         "x": 480,
-        "y": 720,
+        "y": 740,
         "wires": [
             [
                 "e4a8d854e7271119"
@@ -2512,15 +2513,60 @@
         "z": "eaae323a.31b3",
         "name": "reload home metadata",
         "links": [
-            "9da084587d41c266"
+            "9da084587d41c266",
+            "3dd4b847bdc475c3"
         ],
         "x": 545,
-        "y": 680,
+        "y": 700,
         "wires": [
             [
                 "e4a8d854e7271119"
             ]
         ]
+    },
+    {
+        "id": "f88743f06aedb8df",
+        "type": "change",
+        "z": "eaae323a.31b3",
+        "name": "acq_software",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "acq_software",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 750,
+        "y": 840,
+        "wires": [
+            [
+                "cc123e0868c072b7"
+            ]
+        ]
+    },
+    {
+        "id": "cc123e0868c072b7",
+        "type": "ui_text",
+        "z": "eaae323a.31b3",
+        "group": "11cf057a75411666",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Software version",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 970,
+        "y": 840,
+        "wires": []
     },
     {
         "id": "4557d689.a4fa88",
@@ -10819,11 +10865,12 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 400,
+        "y": 420,
         "wires": [
             [
                 "8343fa69.49339",
-                "632034bd6eae09e3"
+                "632034bd6eae09e3",
+                "3dd4b847bdc475c3"
             ]
         ]
     },
@@ -11886,12 +11933,25 @@
         "to": "",
         "reg": false,
         "x": 370,
-        "y": 440,
+        "y": 480,
         "wires": [
             [
                 "8343fa69.49339"
             ]
         ]
+    },
+    {
+        "id": "3dd4b847bdc475c3",
+        "type": "link out",
+        "z": "1371dec5.76e671",
+        "name": "software version update",
+        "mode": "link",
+        "links": [
+            "132488341a5bd62f"
+        ],
+        "x": 535,
+        "y": 380,
+        "wires": []
     },
     {
         "id": "b9bf06d6.26c518",
