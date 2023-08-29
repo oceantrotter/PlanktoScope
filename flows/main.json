@@ -9061,26 +9061,6 @@
         ]
     },
     {
-        "id": "f078c068.eacf58",
-        "type": "ui_template",
-        "z": "cb95299c.2817c8",
-        "group": "46be9c86.dea684",
-        "name": "Stream Segmented object",
-        "order": 2,
-        "width": 10,
-        "height": 8,
-        "format": "<span ng-bind-html=\"msg.payload\"></span>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": false,
-        "templateScope": "local",
-        "x": 1290,
-        "y": 860,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "43f97b93.b76294",
         "type": "inject",
         "z": "cb95299c.2817c8",
@@ -9415,41 +9395,6 @@
         "wires": [
             [
                 "4d70f657b9e0cb81"
-            ]
-        ]
-    },
-    {
-        "id": "604659d148759b84",
-        "type": "link in",
-        "z": "cb95299c.2817c8",
-        "name": "Cam Stream",
-        "links": [
-            "49111a72f4e32740"
-        ],
-        "x": 885,
-        "y": 860,
-        "wires": [
-            [
-                "e077b83ad375cb95"
-            ]
-        ]
-    },
-    {
-        "id": "e077b83ad375cb95",
-        "type": "template",
-        "z": "cb95299c.2817c8",
-        "name": "Prepare stream HTML",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "<center>\n    Latest object segmented:<br/>\n    <img src=\"http://{{payload}}:8001/object.mjpg\"\n    onerror=\"this.onerror=null; this.src='http://{{payload}}:80/error.svg'\"\n    alt=\"If you see this, there probably is an error either with your camera or with the python service. Please restart your machine.\"\n    style=\"max-width: 100%;max-height: 100%;\">\n</center>",
-        "output": "str",
-        "x": 1040,
-        "y": 860,
-        "wires": [
-            [
-                "f078c068.eacf58"
             ]
         ]
     },
