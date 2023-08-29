@@ -350,7 +350,7 @@ class SegmenterProcess(multiprocessing.Process):
             # Y coordinates of the top left point of the smallest rectangle enclosing the object
             "by": prop.bbox[0],
             # circularity : (4∗π ∗Area)/Perim^2 a value of 1 indicates a perfect circle, a value approaching 0 indicates an increasingly elongated polygon
-            "circ.": (4 * np.pi * prop.filled_area) / prop.perimeter ** 2,
+            "circ.": (4 * np.pi * prop.filled_area) / prop.perimeter**2,
             # Surface area of the object excluding holes, in square pixels (=Area*(1-(%area/100))
             "area_exc": prop.area,
             # Surface area of the object in square pixels
@@ -386,7 +386,7 @@ class SegmenterProcess(multiprocessing.Process):
             # perim/major
             "perimmajor": prop.perimeter / prop.major_axis_length,
             # (4 ∗ π ∗ Area_exc)/perim 2
-            "circex": np.divide(4 * np.pi * prop.area, prop.perimeter ** 2),
+            "circex": np.divide(4 * np.pi * prop.area, prop.perimeter**2),
             # Angle between the primary axis and a line parallel to the x-axis of the image
             "angle": prop.orientation / np.pi * 180 + 90,
             # # X coordinate of the top left point of the image
@@ -473,7 +473,7 @@ class SegmenterProcess(multiprocessing.Process):
         object_number = len(regionprops_filtered)
         logger.debug(f"Found {nlabels} labels, or {object_number} after size filtering")
 
-        for (i, region) in enumerate(regionprops_filtered):
+        for i, region in enumerate(regionprops_filtered):
             region.label = i + start_count
 
             # Publish the object_id to via MQTT to Node-RED
@@ -590,10 +590,10 @@ class SegmenterProcess(multiprocessing.Process):
             )
             if images_count < 10:
                 self._calculate_flat(
-                    images_list[0:images_count], images_count, self.__working_path
+                    images_list[:images_count], images_count, self.__working_path
                 )
             else:
-                self._calculate_flat(images_list[0:10], 10, self.__working_path)
+                self._calculate_flat(images_list[:10], 10, self.__working_path)
 
             if self.__save_debug_img:
                 self._save_image(
@@ -604,7 +604,7 @@ class SegmenterProcess(multiprocessing.Process):
         average_time = 0
 
         # TODO here would be a good place to parallelize the computation
-        for (i, filename) in enumerate(images_list):
+        for i, filename in enumerate(images_list):
             name = os.path.splitext(filename)[0]
 
             # Publish the object_id to via MQTT to Node-RED
@@ -816,7 +816,7 @@ class SegmenterProcess(multiprocessing.Process):
 
         project = self.__global_metadata["sample_project"].replace(" ", "_")
         sample = self.__global_metadata["sample_id"].replace(" ", "_")
-        date = datetime.datetime.utcnow().isoformat()
+        date = datetime.datetime.now(datetime.timezone.utc).isoformat()
 
         self.__global_metadata["process_datetime"] = date
         self.__global_metadata["process_uuid"] = self.__process_uuid
@@ -860,7 +860,7 @@ class SegmenterProcess(multiprocessing.Process):
             self.__ecotaxa_path,
             # filename includes project name, timestamp and sample id
             f"ecotaxa_{project}_{date}_{sample}.zip",
-        # TODO #102 sanitize the filename to remove potential problems with spaces and special characters
+            # TODO #102 sanitize the filename to remove potential problems with spaces and special characters
         )
 
         self.__working_path = path
@@ -900,7 +900,9 @@ class SegmenterProcess(multiprocessing.Process):
 
         # Add file 'done' to path to mark the folder as already segmented
         with open(os.path.join(self.__working_path, "done.txt"), "w") as done_file:
-            done_file.writelines(datetime.datetime.utcnow().isoformat())
+            done_file.writelines(
+                datetime.datetime.now(datetime.timezone.utc).isoformat()
+            )
         logger.info(f"Pipeline has been run for {path}")
 
         return True
