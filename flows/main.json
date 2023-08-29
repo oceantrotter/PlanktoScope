@@ -14140,7 +14140,7 @@
                 }
             },
             {
-                "field": "Action",
+                "field": "action",
                 "title": "Delete",
                 "width": "",
                 "align": "left",
@@ -14165,7 +14165,7 @@
         "type": "ui_template",
         "z": "073a18d556c8d083",
         "group": "2cfbd3d0b5d8477e",
-        "name": "",
+        "name": "deletion script",
         "order": 2,
         "width": 0,
         "height": 0,
@@ -14175,7 +14175,7 @@
         "resendOnRefresh": true,
         "templateScope": "global",
         "className": "",
-        "x": 840,
+        "x": 860,
         "y": 220,
         "wires": [
             [
@@ -14188,13 +14188,13 @@
         "type": "function",
         "z": "073a18d556c8d083",
         "name": "Delete var",
-        "func": "// Extract the subkey value\nvar key = msg.payload.key;\n\n// Parse the subkey value to get the value attribute\nvar value = key.match(/value=\"(.*?)\"/)[1]\n\nglobal.set(value, undefined);\n\n// Set the value as the new payload\nmsg.payload = value;\nreturn msg;\n",
+        "func": "if (msg.topic.includes(\"action\")){\n    // Extract the subkey value\n    var key = msg.payload.key;\n\n    // Parse the subkey value to get the value attribute\n    var value = key.match(/value=\"(.*?)\"/)[1]\n\n    global.set(value, undefined);\n\n    // Set the value as the new payload\n    msg.payload = value;\n    return msg;\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 990,
+        "x": 1050,
         "y": 220,
         "wires": [
             [
