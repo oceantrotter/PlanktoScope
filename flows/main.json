@@ -12811,7 +12811,7 @@
         "order": 1,
         "width": 0,
         "height": 0,
-        "format": "<div>\n    <center>This widget gives you the status of the wireless connections of the device.<br><br>\n        If you cut the power of the wireless cards, you <b>WILL</b> lose all wifi access to the device.<br><br>\n        To restore the wireless access, you will have to physically connect to the machine with an Ethernet cable.\n    </center>\n</div>",
+        "format": "<div>\n    <center>This widget gives you the status of the wireless connections of the device.<br><br>\n        If you cut the power of the wireless cards, you <b>WILL</b> lose all wifi access to the device.<br><br>\n        To restore the wireless access, you will have to physically connect to the machine with an Ethernet cable.<br><br>\n        Please note that the Bluetooth network is not in use in the PlanktoScope.\n    </center>\n</div>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
