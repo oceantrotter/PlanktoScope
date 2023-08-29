@@ -1526,7 +1526,7 @@
         "height": 1
     },
     {
-        "id": "8bcd838f4d3485b1",
+        "id": "5970a8d94dfbb369",
         "type": "ui_spacer",
         "z": "cb95299c.2817c8",
         "name": "spacer",
@@ -1536,17 +1536,7 @@
         "height": 1
     },
     {
-        "id": "da1fbdc2570f185a",
-        "type": "ui_spacer",
-        "z": "cb95299c.2817c8",
-        "name": "spacer",
-        "group": "abeb6dad.635a2",
-        "order": 12,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "86517323ae40728b",
+        "id": "4b1f8c2037a1259f",
         "type": "ui_spacer",
         "z": "cb95299c.2817c8",
         "name": "spacer",
@@ -1556,7 +1546,7 @@
         "height": 1
     },
     {
-        "id": "a5d5876013165873",
+        "id": "0721b3b0806f99f5",
         "type": "ui_spacer",
         "z": "cb95299c.2817c8",
         "name": "spacer",
@@ -8234,8 +8224,8 @@
         "z": "cb95299c.2817c8",
         "name": "Start segmentation",
         "group": "abeb6dad.635a2",
-        "order": 11,
-        "width": 5,
+        "order": 9,
+        "width": 6,
         "height": 1,
         "passthru": false,
         "label": "Start segmentation",
@@ -8262,7 +8252,7 @@
         "d": true,
         "name": "Stop segmentation",
         "group": "abeb6dad.635a2",
-        "order": 13,
+        "order": 10,
         "width": 4,
         "height": 1,
         "passthru": true,
@@ -8707,7 +8697,7 @@
         "z": "cb95299c.2817c8",
         "group": "abeb6dad.635a2",
         "name": "",
-        "order": 10,
+        "order": 12,
         "width": 10,
         "height": 11,
         "lineType": "one",
@@ -8747,7 +8737,7 @@
         "z": "cb95299c.2817c8",
         "name": "Refresh",
         "group": "abeb6dad.635a2",
-        "order": 9,
+        "order": 11,
         "width": 0,
         "height": 0,
         "passthru": false,
