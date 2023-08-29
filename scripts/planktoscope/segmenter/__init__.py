@@ -922,23 +922,23 @@ class SegmenterProcess(multiprocessing.Process):
                 # {"action":"segment"}
                 if "settings" in last_message:
                     # force rework of already done folder
-                    force = (
-                        last_message["settings"]["force"]
-                        if "force" in last_message
+                    force_rework = (
+                        last_message["settings"]["force_rework"]
+                        if "force_rework" in last_message["settings"]
                         else False
                     )
 
                     # parse folders recursively starting from the given parameter
                     recursive = (
                         last_message["settings"]["recursive"]
-                        if "recursive" in last_message
+                        if "recursive" in last_message["settings"]
                         else False
                     )
 
                     # generate ecotaxa output archive
                     ecotaxa_export = (
                         last_message["settings"]["ecotaxa"]
-                        if "ecotaxa" in last_message
+                        if "ecotaxa" in last_message["settings"]
                         else True
                     )
 
@@ -961,13 +961,14 @@ class SegmenterProcess(multiprocessing.Process):
                 self.segmenter_client.client.publish(
                     "status/segmenter", '{"status":"Started"}'
                 )
+                logger.debug(f"Settings parsed: force_rework:{force_rework}, recursive:{recursive},ecotaxa_export:{ecotaxa_export}")
                 if path:
                     if recursive:
-                        self.segment_all(path, force, ecotaxa_export)
+                        self.segment_all(path, force_rework, ecotaxa_export)
                     else:
-                        self.segment_list(path, force, ecotaxa_export)
+                        self.segment_list(path, force_rework, ecotaxa_export)
                 else:
-                    self.segment_all(self.__img_path, force, ecotaxa_export)
+                    self.segment_all(self.__img_path, force_rework, ecotaxa_export)
 
             elif last_message["action"] == "stop":
                 logger.info("The segmentation has been interrupted.")
