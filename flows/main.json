@@ -6530,7 +6530,7 @@
         "type": "function",
         "z": "bccd1f23.87219",
         "name": "Constrain wb value",
-        "func": "if (msg.payload < 0.0 || msg.payload > 8.0){\n    msg.payload = Math.max(0.00, msg.payload)\n    msg.payload = Math.min(8.00, msg.payload)\n    if (msg.topic.contains(\"red\")){\n        return [null,msg,null]\n    }\n    if (msg.topic.contains(\"blue\")){\n        return [null,null,msg]\n    }\n}\nreturn [msg,null,null];",
+        "func": "if (msg.payload < 0.0 || msg.payload > 8.0){\n    msg.payload = Math.max(0.00, msg.payload)\n    msg.payload = Math.min(8.00, msg.payload)\n    if (msg.topic.contains(\"red\")){\n        return [msg,null,null]\n    }\n    if (msg.topic.contains(\"blue\")){\n        return [null,null,msg]\n    }\n}\nreturn [null, msg,null];",
         "outputs": 3,
         "noerr": 0,
         "initialize": "",
@@ -6540,10 +6540,10 @@
         "y": 780,
         "wires": [
             [
-                "5e147425.7666ec"
+                "d5415af6.e06cc"
             ],
             [
-                "d5415af6.e06cc"
+                "5e147425.7666ec"
             ],
             [
                 "dba68c1f.e3144"
@@ -6585,6 +6585,10 @@
         "format": "{{msg.payload.acq_fnumber_objective}}",
         "layout": "row-spread",
         "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
         "x": 1270,
         "y": 40,
         "wires": []
@@ -6602,6 +6606,10 @@
         "format": "{{msg.payload.acq_magnification}}",
         "layout": "row-spread",
         "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
         "x": 1230,
         "y": 80,
         "wires": []
@@ -6619,6 +6627,10 @@
         "format": "{{msg.payload.process_pixel}}",
         "layout": "row-spread",
         "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
         "x": 1240,
         "y": 120,
         "wires": []
@@ -6636,6 +6648,10 @@
         "format": "{{msg.payload.min_size}}",
         "layout": "row-spread",
         "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
         "x": 1270,
         "y": 160,
         "wires": []
@@ -6653,6 +6669,10 @@
         "format": "{{msg.payload.max_size}}",
         "layout": "row-spread",
         "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
         "x": 1270,
         "y": 200,
         "wires": []
@@ -13284,7 +13304,7 @@
         "id": "c67c305004f87e39",
         "type": "change",
         "z": "1eaf21c8.f7a21e",
-        "name": "Get process_pixel_fixed",
+        "name": "process_pixel_fixed",
         "rules": [
             {
                 "t": "set",
@@ -13299,8 +13319,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 370,
-        "y": 480,
+        "x": 350,
+        "y": 520,
         "wires": [
             [
                 "244ca5dd62df2bcd"
@@ -13324,7 +13344,7 @@
         "topic": "process_pixel_fixed",
         "topicType": "str",
         "x": 650,
-        "y": 480,
+        "y": 520,
         "wires": [
             [
                 "f9b47f4b1da15778"
@@ -13343,7 +13363,7 @@
         "finalize": "",
         "libs": [],
         "x": 1020,
-        "y": 480,
+        "y": 520,
         "wires": [
             [
                 "5d5ad36d2c50dcc2",
@@ -13359,8 +13379,8 @@
         "links": [
             "cfc783d7.d6ceb"
         ],
-        "x": 1255,
-        "y": 520,
+        "x": 1235,
+        "y": 480,
         "wires": []
     },
     {
@@ -13409,10 +13429,11 @@
         "topicType": "str",
         "className": "",
         "x": 630,
-        "y": 520,
+        "y": 480,
         "wires": [
             [
-                "2715e7601f5345ad"
+                "5d5ad36d2c50dcc2",
+                "13d04338daf07495"
             ]
         ]
     },
@@ -13420,7 +13441,7 @@
         "id": "11955bbeefc29ab4",
         "type": "change",
         "z": "1eaf21c8.f7a21e",
-        "name": "Get acq_fnumber_objective",
+        "name": "acq_fnumber_objective",
         "rules": [
             {
                 "t": "set",
@@ -13428,6 +13449,13 @@
                 "pt": "msg",
                 "to": "acq_fnumber_objective",
                 "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "acq_fnumber_objective",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -13435,8 +13463,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 380,
-        "y": 520,
+        "x": 370,
+        "y": 480,
         "wires": [
             [
                 "6146ba22df928516"
@@ -13475,8 +13503,8 @@
         "type": "subflow:4ed26b8b.253504",
         "z": "1eaf21c8.f7a21e",
         "name": "",
-        "x": 1320,
-        "y": 480,
+        "x": 1300,
+        "y": 520,
         "wires": []
     },
     {
@@ -13488,19 +13516,6 @@
         "y": 400,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "2715e7601f5345ad",
-        "type": "subflow:c4e2b4ed08e5c5db",
-        "z": "1eaf21c8.f7a21e",
-        "name": "",
-        "x": 1030,
-        "y": 520,
-        "wires": [
-            [
-                "5d5ad36d2c50dcc2"
-            ]
         ]
     },
     {
